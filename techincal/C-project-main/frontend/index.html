@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Navigation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🗺️ Campus Navigation System</h1>
+            <p>Find your way around campus with ease</p>
+        </header>
+
+        <main>
+            <div class="control-panel">
+                <div class="section">
+                    <h2>Search Buildings</h2>
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search for a building...">
+                        <button onclick="searchBuildings()">Search</button>
+                    </div>
+                    <div id="searchResults" class="results"></div>
+                </div>
+
+                <div class="section">
+                    <h2>Get Directions</h2>
+                    <div class="direction-controls">
+                        <div class="select-group">
+                            <label>From:</label>
+                            <select id="startBuilding">
+                                <option value="">Select Starting Point</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <label>To:</label>
+                            <select id="endBuilding">
+                                <option value="">Select Destination</option>
+                            </select>
+                        </div>
+                        <button onclick="getDirections()">Find Route</button>
+                    </div>
+                    <div id="directionResults" class="results"></div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h2>Campus Map</h2>
+                <canvas id="campusCanvas" width="800" height="600"></canvas>
+                <div class="legend">
+                    <div><span class="building-marker"></span> Building</div>
+                    <div><span class="path-marker"></span> Path</div>
+                    <div><span class="route-marker"></span> Route</div>
+                </div>
+            </div>
+
+            <div class="buildings-list">
+                <h2>All Buildings</h2>
+                <div id="buildingsList" class="list-container"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Campus Navigation System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
