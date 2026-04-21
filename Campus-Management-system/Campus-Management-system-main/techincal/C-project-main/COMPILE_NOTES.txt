@@ -1,0 +1,32 @@
+# Compilation Test File
+# This file contains syntax checks and can be compiled individually
+
+# To test individual compilation:
+# g++ -std=c++17 -c src/Building.cpp -I./include
+# g++ -std=c++17 -c src/CampusGraph.cpp -I./include
+# g++ -std=c++17 -c src/NavigationServer.cpp -I./include
+# g++ -std=c++17 -c src/main.cpp -I./include
+# g++ -o navigate *.o -lm
+
+# Then run: ./navigate
+
+# All source files use C++17 standard
+# Required headers:
+#   - <string>
+#   - <vector>
+#   - <map>
+#   - <queue>
+#   - <cmath>
+#   - <algorithm>
+#   - <limits>
+#   - <memory>
+#   - <iostream>
+#   - <fstream>
+#   - <sstream>
+
+# Linking:
+#   - Standard C++ library (automatic)
+#   - Math library (-lm for mathematical functions)
+
+# No external dependencies required!
+# Pure C++ - works on any system with a C++17 compiler
